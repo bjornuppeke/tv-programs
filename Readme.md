@@ -37,11 +37,11 @@
 
   show
 
-  	GET /programs/:id
+    GET /programs/:id
 
   create
 
-  	POST /programs/create
+    POST /programs/create
 
   delete
 
@@ -62,22 +62,22 @@ var programSchema = new Schema({
 ```
 
 ## Design pattern
-	I've tried to maintain a somewhat MVC pattern
+  I've tried to maintain a somewhat MVC pattern
 
 		project
 			|
-			+--	models
+			+	models
 			|		|
-			|		+--	program.js
+			|		+	program.js
 			|
-			+--	views
+			+	views
 			|		|
-			|		+--	program
+			|		+	program
 			|				|
-			|				+--	index.jade
-			|				+--	show.jade
-			|				+--	create.jade
+			|				+	index.jade
+			|				+	show.jade
+			|				+	create.jade
 			|	
-			+--	controllers
+			+	controllers
 					|
-					+-- program.js
+					+	program.js
