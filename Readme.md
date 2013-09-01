@@ -23,4 +23,4 @@
 
     $ node index.js
 
-  Point you browser to localhot:3000.
+  Point your browser to localhot:3000.
