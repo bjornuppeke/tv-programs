@@ -67,17 +67,17 @@ var programSchema = new Schema({
     project
     |
     + models
-    | |
-    | + program.js
+    |  |
+    |  + program.js
     |
     + views
-    | |
-    | + program
-    |   |
-    |   + index.jade
-    |   + show.jade
-    |   + create.jade
-    |	
-    +	controllers
-      |
-      + program.js
+    |  |
+    |  + program
+    |     |
+    |     + index.jade
+    |     + show.jade
+    |     + create.jade
+    |
+    + controllers
+       |
+       + program.js
