@@ -24,3 +24,22 @@
     $ node index.js
 
   Point your browser to localhost:3000.
+
+## RESTful
+  Programs are created, read and deleted in a RESTful manner
+
+  index
+
+    GET /programs
+
+  show
+
+  	GET /programs/:id
+
+  create
+
+  	POST /programs/create
+
+  delete
+
+    DELETE /programs/:id
