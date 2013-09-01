@@ -1,14 +1,17 @@
 var Program = require('../models/program.js');
-
 var dateFormat = require ('../libs/date.format.js').dateFormat;
 var dateMask = 'dddd, mmmm dS, yyyy, h:MM TT';
-// dateFormat(Date, mask, utc);
 
+// Db Seeding
 Program.count(function(err, count) {
-  if (count === 0) seedDb();
+  if (count === 0) {
+    console.log('There are no programs in the database. Let\'s go ahead and create some!');
+    seedDb();
+  }
 });
 
 exports.index = function(req, res) {
+  // Pagination
   var pageSize = 10
     , page = parseInt(req.query.page) || 1;
 
@@ -58,23 +61,6 @@ exports.create = function(req,res) {
 }
 
 exports.store = function(req, res) {
-
-  var nameRE = /^[\d\-a-zA-Z ]+$/
-
-  if (!nameRE.test(req.body.name)) {
-    return res.render('program/create', {
-      error: 'Name is required and you can only use letters, numbers and spaces in the name.',
-      body: req.body
-    });
-  }
-
-  if (!req.body.start_time) {
-    return res.render('program/create', {
-      error: 'You must pick a start time.',
-      body: req.body
-    });
-  }
-
   new Program({
     "name": req.body.name,
     "url": req.body.url,
