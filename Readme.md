@@ -1,4 +1,4 @@
-## Viaplay TV Programs
+## TV Programs
   A web app for creating, reading and deleting TV programs from a database.
 
 ## Built using:
