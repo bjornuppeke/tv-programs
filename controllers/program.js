@@ -61,14 +61,29 @@ exports.create = function(req,res) {
 }
 
 exports.store = function(req, res) {
+
+  var date = req.body.start_time.split(' ')[0];
+  var time = req.body.start_time.split(' ')[1];
+  var day = parseInt(date.split('/')[0]);
+  var month = parseInt(date.split('/')[1]);
+  var year = parseInt(date.split('/')[2]);
+  var hour = parseInt(time.split(':')[0]);
+  var minute = parseInt(time.split(':')[1]);
+  var second = parseInt(time.split(':')[2]);
+
+  try {
+    var isoTime = new Date(year, month, day, hour, minute, second, 0).toISOString();
+  } catch (e) {
+    return res.render('500', {error: e});
+  }
+
   new Program({
     "name": req.body.name,
     "url": req.body.url,
     "leadtext": req.body.leadtext,
     "b-line": req.body["b-line"],
     "synopsis": req.body.synopsis,
-    "start_time": new Date(req.body.start_time).toISOString()
-
+    "start_time": isoTime
   }).save(function (err, program) {
     if (err) return res.render('500');
     res.render('program/create', {success: 'Successfully saved "' + program.name + '"'});

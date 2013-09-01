@@ -9,14 +9,15 @@
 	}
 
 	function generateAlert(msg) {
-		return '<div class="alert alert-danger">'+
-			'<button type="button" data-dismiss="alert" class="close">&times;</button>'+
-			msg+
-			'</div>';
+		return	'<div class="alert alert-danger">'+
+							'<button type="button" data-dismiss="alert" class="close">&times;</button>'+
+							msg+
+						'</div>';
 	} 
 	
 	$(document).ready(function() {
 
+		// Removing programs
 		$('#name').off().on('keypress change paste input', function() {
 			$urlStr = $(this).val().toLowerCase().trim().split(' ').join('-');
 			$('#url-info').text($urlStr);
@@ -36,11 +37,12 @@
 			$('.remove').removeClass('hidden');
 		})
 
+		// Date picker
 		$(function() {
 			$('#datetimepicker').datetimepicker({
 				language: 'en',
 				format: 'dd/MM/yyyy hh:mm:ss'
-			});
+			})
 		});
 
 		// Form validation

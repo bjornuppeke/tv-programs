@@ -7,8 +7,9 @@ block content
 	div.well
 		p.lead 500 Server Error
 		hr
-		p
-			| Oops! Something went wrong...
+		pre
+			| #{error}
+		hr
 		a(href="/programs" class="btn btn-info")
 			i.icon-refresh.icon-white
 			|  Get back in there
