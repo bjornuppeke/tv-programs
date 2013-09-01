@@ -40,13 +40,13 @@
 
     GET /programs.json
 
-  show
-
-    GET /programs/:id
-
   create
 
     GET /programs/create
+
+  show
+
+    GET /programs/:id
 
   store
 
