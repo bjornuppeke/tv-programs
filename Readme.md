@@ -14,7 +14,7 @@
 
     $ npm install
 
-  Start mongodb (in a new shell).
+  Start mongodb (in another shell).
 
     $ mongod
 
