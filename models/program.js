@@ -7,7 +7,9 @@ var programSchema = new Schema({
 	"leadtext": {type: String, default: ''},
 	"b-line": {type: String, default: ''},
 	"synopsis": {type: String, default: ''},
-  "start_time": {type: Date, default: new Date("2013-10-01T12:00:00Z")}
+  "start_time": {type: Date, default: new Date("2014-01-01T12:00:00Z")}
 });
  
 module.exports = mongoose.model('Program', programSchema);
+    
+

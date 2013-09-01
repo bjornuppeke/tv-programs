@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var app = express();
  
 // connect to Mongo when the app initializes
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/tvprograms');
 
 app.configure(function(){
 	app.set('views', __dirname + '/views');

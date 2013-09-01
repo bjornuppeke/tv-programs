@@ -1,0 +1,14 @@
+extend layout
+
+block title
+	| 500 Server Error
+
+block content
+	div.well
+		p.lead 500 Server Error
+		hr
+		p
+			| Oops! Something went wrong...
+		a(href="/programs" class="btn btn-info")
+			i.icon-refresh.icon-white
+			|  Get back in there

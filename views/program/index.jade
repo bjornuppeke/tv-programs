@@ -18,7 +18,15 @@ block content
 						td
 							a(href="/programs/#{program.url}") #{program.name}
 						td #{program.human_start_time}
-
+		ul.pager
+			if isPrev
+				li
+					a(href="?page=#{prevPage}")
+						| Previous
+			if isNext
+				li
+					a(href="?page=#{nextPage}")
+						| Next
 		a(href="/programs/create" class="btn btn-info")
 			i.icon-pencil.icon-white
 			|  New Program

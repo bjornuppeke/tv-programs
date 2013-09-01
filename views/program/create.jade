@@ -13,7 +13,7 @@ block content
 		p.lead
 			| Create a new program
 		hr
-		form(action='/programs', method='POST')
+		form(id="create" action='/programs', method='POST')
 
 			label(for='name', class='control-label') Name
 			input(type='text', id="name", name='name', class="span6")
@@ -33,7 +33,10 @@ block content
 			textArea(type='text', rows="4", name='synopsis', class="span6")
 
 			label(for='start_time', class='control-label') Start Time
-			input(type='text', name='start_time', class="span6", value="2013-10-01T12:00:00Z")
+			div#datetimepicker.input-append.date
+				input(type="text", name='start_time', class="span3")
+				span.add-on
+					i(data-time-icon="icon-time" data-date-icon="icon-calendar")
 			hr
 			div.controls-group		
 				button(type="submit" class="btn btn-info")
@@ -42,3 +45,4 @@ block content
 				a(href="/programs" class="btn btn-inline")
 					i.icon-list
 					|  Back to the list
+		div#validation

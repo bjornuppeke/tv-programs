@@ -7,7 +7,7 @@
   * [mongoose](http://mongoosejs.com/) ODM for mongodb.
   * [express.js](http://expressjs.com/) node framework.
   * [jade](http://jade-lang.com) for templating.
-  * [Twitter Bootstrap](http://getbootstrap.com/2.3.2/) for client interfaces.
+  * [twitter bootstrap](http://getbootstrap.com/2.3.2/) for client interfaces.
   
 
 ## To run:
@@ -43,3 +43,17 @@
   delete
 
     DELETE /programs/:id
+
+## Database
+  The Mongoose schema for a Program:
+
+```javascript
+var programSchema = new Schema({
+	"name": {type: String, default: ''},
+	"url": {type: String, default: ''},
+	"leadtext": {type: String, default: ''},
+	"b-line": {type: String, default: ''},
+	"synopsis": {type: String, default: ''},
+  "start_time": {type: Date, default: new Date("2014-01-01T12:00:00Z")}
+});
+``` 
