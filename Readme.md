@@ -52,32 +52,32 @@
 
 ```javascript
 var programSchema = new Schema({
-	"name": {type: String, default: ''},
-	"url": {type: String, default: ''},
-	"leadtext": {type: String, default: ''},
-	"b-line": {type: String, default: ''},
-	"synopsis": {type: String, default: ''},
-	"start_time": {type: Date, default: new Date("2014-01-01T12:00:00Z")}
+  "name": {type: String, default: ''},
+  "url": {type: String, default: ''},
+  "leadtext": {type: String, default: ''},
+  "b-line": {type: String, default: ''},
+  "synopsis": {type: String, default: ''},
+  "start_time": {type: Date, default: new Date("2014-01-01T12:00:00Z")}
 });
 ```
 
 ## Design pattern
   I've tried to maintain a somewhat MVC pattern
 
-		project
-			|
-			+	models
-			|		|
-			|		+	program.js
-			|
-			+	views
-			|		|
-			|		+	program
-			|				|
-			|				+	index.jade
-			|				+	show.jade
-			|				+	create.jade
-			|	
-			+	controllers
-					|
-					+	program.js
+    project
+    |
+    + models
+    | |
+    | + program.js
+    |
+    + views
+    | |
+    | + program
+    |   |
+    |   + index.jade
+    |   + show.jade
+    |   + create.jade
+    |	
+    +	controllers
+      |
+      + program.js
