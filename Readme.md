@@ -10,6 +10,11 @@
   * [twitter bootstrap](http://getbootstrap.com/2.3.2/) for client interfaces, because sometimes there's just no time for custom interface design.
 
 ## To run
+  Clone the repository.
+
+    $ git clone https://github.com/bjornuppeke/tv-programs.git
+    $ cd tv-programs
+
   Install the dependencies.
 
     $ npm install
