@@ -1,0 +1,27 @@
+extend ../layout
+
+block title
+	| Programs
+
+block content
+	div.well
+		p.lead Programs
+		hr
+		table.table.table-striped.table-bordered
+			thead
+				tr
+					th Name
+					th Start Time
+			tbody
+				each program in programs
+					tr
+						td
+							a(href="/programs/#{program.url}") #{program.name}
+						td #{program.human_start_time}
+
+		a(href="/programs/create" class="btn btn-info")
+			i.icon-pencil.icon-white
+			|  New Program
+		a(href="/programs.json" class="btn btn-inline")
+			i.icon-list-alt
+			|  Get JSON

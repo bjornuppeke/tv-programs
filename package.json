@@ -1,0 +1,16 @@
+{
+    "name": "viaplay programs",
+    "description": "Web App",
+    "version": "0.0.1",
+    "private": true,
+    "author": {
+		"name": "Björn Uppeke",
+		"email": "bjornuppeke@gmail.com"
+	},
+    "dependencies": {
+        "express": "3.x",
+        "mongodb": "*",
+        "mongoose": "*",
+        "jade": "*"
+    }
+}
