@@ -3,10 +3,12 @@
 
 ## Built using:
   * [node.js](http://nodejs.org)
-  * [express.js](http://expressjs.com/) node framework.
-  * [jade](http://jade-lang.com) for templating.
   * [mongodb](http://www.mongodb.org/) document database.
   * [mongoose](http://mongoosejs.com/) ODM for mongodb.
+  * [express.js](http://expressjs.com/) node framework.
+  * [jade](http://jade-lang.com) for templating.
+  * [Twitter Bootstrap](http://getbootstrap.com/2.3.2/) for client interfaces.
+  
 
 ## To run:
   Install the dependencies.
@@ -18,7 +20,7 @@
     $ mongod
 
   Run the app.
-  
+
     $ node index.js
 
   Point you browser to localhot:3000.
