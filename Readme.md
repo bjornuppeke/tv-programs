@@ -30,7 +30,7 @@
   Point your browser to localhost:3000.
 
 ## RESTful
-  Programs are created, read and deleted in a RESTful manner
+  Programs are created, read and deleted in a CRUD-ish RESTful manner
 
   index
 
@@ -46,7 +46,11 @@
 
   create
 
-    POST /programs/create
+    GET /programs/create
+
+  store
+
+    POST /programs/:id
 
   delete
 
