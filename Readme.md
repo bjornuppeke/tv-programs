@@ -10,12 +10,15 @@
 
 ## To run:
   Install the dependencies.
+
     $ npm install
 
   Start mongodb (in a seperate shell window/tab).
+
     $ mongod
 
   Run the app.
+  
     $ node index.js
 
   Point you browser to localhot:3000.
