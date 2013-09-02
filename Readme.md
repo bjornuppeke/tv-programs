@@ -44,13 +44,13 @@
 
     GET /programs/create
 
-  show
-
-    GET /programs/:id
-
   store
 
-    POST /programs/:id
+    POST /programs/
+
+  show
+
+    GET /programs/:url
 
   delete
 
