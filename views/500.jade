@@ -7,8 +7,9 @@ block content
 	div.well
 		p.lead 500 Server Error
 		hr
-		pre
-			| #{error}
+		if error
+			pre
+				| #{error}
 		hr
 		a(href="/programs" class="btn btn-info")
 			i.icon-refresh.icon-white

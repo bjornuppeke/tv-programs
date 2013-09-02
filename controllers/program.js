@@ -19,7 +19,7 @@ exports.index = function(req, res) {
   .skip(pageSize * (page - 1))
   .limit(pageSize)
   .exec(function(err, programs) {
-    if (err) return res.render('500');
+    if (err) return res.render('500', {error: err});
 
     for (var i in programs) {
       programs[i].human_start_time = dateFormat(new Date(programs[i].start_time), dateMask);
@@ -85,7 +85,7 @@ exports.store = function(req, res) {
     "synopsis": req.body.synopsis,
     "start_time": isoTime
   }).save(function (err, program) {
-    if (err) return res.render('500');
+    if (err) return res.render('500', {error: err});
     res.render('program/create', {success: 'Successfully saved "' + program.name + '"'});
   });
 }
