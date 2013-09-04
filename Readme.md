@@ -73,20 +73,13 @@ var programSchema = new Schema({
 ## Design pattern
   I've tried to maintain a somewhat MVC pattern
 
-    project
-     |
-     + models
-     |  |
-     |  + program.js
-     |
-     + views
-     |  |
-     |  + program
-     |     |
-     |     + index.jade
-     |     + show.jade
-     |     + create.jade
-     |
-     + controllers
-        |
-        + program.js
+    .
+    ├─ models
+    |   └─ program.js
+    ├─ views
+    |   └─ program
+    |       ├─ index.jade
+    |       ├─ show.jade 
+    |       └─ create.jade
+    └─ controllers
+        └─ program.js
